@@ -1,0 +1,97 @@
+@x:10px;
+@linkColor:#4800ff;
+
+
+p{
+    color: darken(@linkColor,80%);
+    background-color: grey;
+}
+h2{
+   
+    color: gold;
+}
+h3{
+   
+   color: darken(@linkColor,95%);
+    background-color: @linkColor + #007789 ;
+}
+
+
+
+  div {
+        &.c1 {
+        }
+        div.c1 {
+        }
+          div.c2 {
+        }
+          div.c3 {
+        }
+.font(@size, @weight) {
+	  font-family:Arial;
+	  font-weight:@weight;
+	  line-height:@size*2;
+	  }
+.container1{
+  padding-top:@x;
+  padding-left:(@x*2);
+  > ul {
+      list-style:circle;
+      .font(14pt,bold);
+      > li{
+          color: lighten(@linkColor,10%);
+          > a {
+              color:@linkColor;
+              & hover{
+                color: darken(@linkColor,30%);
+              }
+               }
+			   
+      } 
+  }
+
+
+
+
+}
+      
+.container2{
+  padding-top:(@x*2);
+  padding-left:(@x*4);
+  
+
+  
+  > ul {
+      list-style:none;
+      .font(14pt,italic);
+      > li{
+          color: lighten(@linkColor,15%);
+          > a {
+             color:@linkColor;
+              & hover{
+                color: darken(@linkColor,30%);
+              }
+               }
+      } 
+  }
+  }
+   .container3{
+  padding-top:(@x);
+  padding-left:(@x*6);
+  > ul {
+      list-style:none;
+      .font(16pt,normal);
+      > li{
+          color: lighten(@linkColor,25%);
+          > a {
+              color:@linkColor;
+              & hover{
+                color: darken(@linkColor,35%);
+              }
+               }
+      } 
+  }
+  }
+   }
+
+
